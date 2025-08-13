@@ -6,7 +6,10 @@ type TokenType =
   | "number"
   | "string"
   | "operator"
-  | "symbol";
+  | "symbol"
+  | "comment"
+  | "whitespace"
+  | "unknown";
 
 interface Token {
   token: string;
@@ -24,6 +27,9 @@ const colorMap: Record<TokenType, string> = {
   string: "text-amber-700",
   operator: "text-green-700",
   symbol: "text-pink-700",
+  comment: "text-gray-500 italic",
+  whitespace: "text-gray-400",
+  unknown: "text-black bg-yellow-200", // Added 'unknown' with styling
 };
 
 export default function TokenTable({tokens}: TokenTableProps) {

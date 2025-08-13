@@ -87,20 +87,20 @@ async function Header() {
             </Link>
           )}
 
-          {/* <SignedIn> */}
-          <div className="flex items-center gap-2">
-            <RunButton />
-            <Link
-              href="/analysis"
-              className="relative group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl overflow-hidden 
+          <SignedIn>
+            <div className="flex items-center gap-2">
+              <RunButton />
+              <Link
+                href="/analysis"
+                className="relative group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl overflow-hidden 
                  bg-gradient-to-r from-purple-600 to-purple-500 hover:opacity-90 transition-opacity shadow-md">
-              <BarChart3 className="w-4 h-4 text-white/90 group-hover:scale-110 group-hover:text-white transition-transform" />
-              <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">
-                Analyze Code
-              </span>
-            </Link>
-          </div>
-          {/* </SignedIn> */}
+                <BarChart3 className="w-4 h-4 text-white/90 group-hover:scale-110 group-hover:text-white transition-transform" />
+                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">
+                  Analyze Code
+                </span>
+              </Link>
+            </div>
+          </SignedIn>
 
           <div className="pl-3 border-l border-gray-800">
             <HeaderProfileBtn />

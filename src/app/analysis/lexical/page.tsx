@@ -1,22 +1,20 @@
 "use client";
 
 import {useState, useEffect} from "react";
-import {useRouter} from "next/navigation";
 import TokenTable from "../_components/TokenTable";
-import {analyzeCode, type Token} from "../../../lib/analyzers/lexicalAnalyzer";
+import {analyzeCode, type Token} from "@/lib/analyzers/lexicalAnalyzer";
 import AnalyzeHeader from "../_components/Header";
 import {useCodeEditorStore} from "@/store/useCodeEditorStore";
 
 export default function LexicalPage() {
   const language = useCodeEditorStore(state => state.language);
-  const router = useRouter();
   const [code, setCode] = useState(`int main() {\n  return 0;\n}`);
   const [tokens, setTokens] = useState<Token[]>([]);
 
   useEffect(() => {
     const savedCode = localStorage.getItem(`editor-code-${language}`);
     if (savedCode) setCode(savedCode);
-  }, []);
+  }, [language]);
 
   function handleAnalyze() {
     const result = analyzeCode(code);
@@ -32,7 +30,7 @@ export default function LexicalPage() {
       </header>
 
       <main className="flex flex-col md:flex-row gap-10 flex-1 max-w-12xl mx-auto px-4 md:px-8 w-full">
-        <section className="w-full md:w-[66.666vw] flex flex-col bg-[#1e1e2e] rounded-xl px- p-8 border border-[#313244] shadow-lg min-h-[600px]">
+        <section className="w-full md:w-[66.666vw] flex flex-col bg-[#1e1e2e] rounded-xl p-8 border border-[#313244] shadow-lg min-h-[600px]">
           <h2 className="text-white text-2xl font-semibold mb-6">Code Input</h2>
           <textarea
             spellCheck={false}
@@ -48,7 +46,7 @@ export default function LexicalPage() {
           </button>
         </section>
 
-        <section className="w-full md:w-[33.333vw] flex flex-col bg-[#1e1e2e] rounded-xl px-6 p-8 border border-[#313244] shadow-lg overflow-auto min-h-[600px]">
+        <section className="w-full md:w-[33.333vw] flex flex-col bg-[#1e1e2e] rounded-xl p-8 border border-[#313244] shadow-lg overflow-auto min-h-[600px]">
           <h2 className="text-white text-3xl font-semibold mb-6">Tokens</h2>
           {tokens.length > 0 ? (
             <TokenTable tokens={tokens} />

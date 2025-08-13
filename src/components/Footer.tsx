@@ -1,4 +1,4 @@
-import { Blocks } from "lucide-react";
+import {Blocks} from "lucide-react";
 import Link from "next/link";
 
 function Footer() {
@@ -9,16 +9,22 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-gray-400">
             <Blocks className="size-5" />
-            <span>Built for developers, by developers</span>
+            <span>Built by Rishabh, Rohit, Sarthak and Siddhant.</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/support" className="text-gray-400 hover:text-gray-300 transition-colors">
+            <Link
+              href="/support"
+              className="text-gray-400 hover:text-gray-300 transition-colors">
               Support
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-gray-300 transition-colors">
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-gray-300 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-gray-300 transition-colors">
+            <Link
+              href="/terms"
+              className="text-gray-400 hover:text-gray-300 transition-colors">
               Terms
             </Link>
           </div>
