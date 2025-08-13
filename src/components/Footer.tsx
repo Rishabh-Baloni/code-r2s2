@@ -8,24 +8,14 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-gray-400">
-            <Blocks className="size-5" />
-            <span>Built by Rishabh, Rohit, Sarthak and Siddhant.</span>
-          </div>
-          <div className="flex items-center gap-6">
             <Link
-              href="/support"
-              className="text-gray-400 hover:text-gray-300 transition-colors">
-              Support
-            </Link>
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-gray-300 transition-colors">
-              Privacy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-gray-300 transition-colors">
-              Terms
+              href="https://portfolio-three-azure-83.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
+            >
+              <Blocks className="size-5" />
+              <span>Built by Rishabh, Rohit, Sarthak and Siddhant.</span>
             </Link>
           </div>
         </div>
