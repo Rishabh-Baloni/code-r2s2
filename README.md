@@ -1,4 +1,4 @@
-<h1 align="center">🚀 CodeCraft - Advanced Code Editor & Compiler Analyzer 🚀</h1>
+<h1 align="center">🚀 Code-R2S2 - Advanced Code Editor & Compiler Analyzer 🚀</h1>
 
 ![Demo App](/public/screenshot-for-readme.png)
 
